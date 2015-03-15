@@ -1,5 +1,12 @@
 package cuny.qc.cs.lukesterlee;
 
+/*
+ * Created by Luke Lee on Fall 2014
+ * Queens College CSCI-323 : Design and Analysis of Algorithms
+ * Project 2 : K-mean Clustering
+ *
+ */
+
 import java.io.*;
 import java.util.*;
 import java.lang.Math;

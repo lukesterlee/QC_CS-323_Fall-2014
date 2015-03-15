@@ -1,5 +1,11 @@
 package cuny.qc.cs.lukesterlee;
 
+/*
+ * Created by Luke Lee on Fall 2014
+ * Queens College CSCI-323 : Design and Analysis of Algorithms
+ * Project 3 : 2-3 Trees
+ *
+ */
 import java.util.Scanner;
 import java.io.*;
 
@@ -46,9 +52,7 @@ public class Project3 {
             }
         }
     }
-    public static void deletion() {
 
-    }
     public static void update(Two3Tree tree, TreeNode spot) {
         if(spot==tree.dummy) {
             return;
@@ -150,6 +154,7 @@ public class Project3 {
                 break;
         }
     }
+
     public static void nullprint(TreeNode spot) {
         if(spot==null) {
             System.out.print("NULL");
@@ -158,6 +163,7 @@ public class Project3 {
             System.out.print(spot.key1);
         }
     }
+
     public static void print(TreeNode spot) {
         if(spot==null) {
             return;
@@ -180,11 +186,14 @@ public class Project3 {
             print(spot.kid3);
         }
     }
+
     public static void main(String[] args) throws FileNotFoundException {
+
         Scanner inFile = new Scanner(new File(args[0]));
         Two3Tree tree = new Two3Tree();
         char op;
         int data;
+
         while(inFile.hasNext()) {
             op = inFile.next().charAt(0);
             if (op=='+') {
@@ -192,10 +201,10 @@ public class Project3 {
                 data = inFile.nextInt();
                 System.out.println(" " + data);
                 TreeNode spot = findSpot(tree.root,data);
+
                 if(spot==null) {
                     System.out.println("The data is already in the database!");
-                }
-                else {
+                } else {
                     TreeNode leaf = new TreeNode(data,-1,spot,null,null,null);
                     leafInsert(tree,spot,leaf);
                 }
@@ -206,6 +215,7 @@ public class Project3 {
                 System.out.println(" " + data);
                 deletion();
             }
+            // Print the entire 2-3 tree.
             else if (op=='p') {
                 System.out.println(op);
                 print(tree.root);

@@ -1,7 +1,10 @@
 package cuny.qc.cs.lukesterlee;
 
-/**
- * Created by Luke on 3/9/2015.
+/*
+ * Created by Luke Lee on Fall 2014
+ * Queens College CSCI-323 : Design and Analysis of Algorithms
+ * Project 3 : 2-3 Trees
+ *
  */
 public class Two3Tree {
     public TreeNode dummy;
